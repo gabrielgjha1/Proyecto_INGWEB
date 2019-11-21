@@ -1,0 +1,28 @@
+body {
+    background-size: cover;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)),
+        url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/NKN-2007-08-18_081042_praying_mantis_%28Yvan_Leduc_author_for_Wikipedia%29.jpg/1024px-NKN-2007-08-18_081042_praying_mantis_%28Yvan_Leduc_author_for_Wikipedia%29.jpg);
+}
+
+.main-section {
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
+
+}
+
+label {
+    font-size: 18px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.modal-content {
+
+    background-color: rgb(255, 255, 255);
+
+    padding: 0 20px;
+    box-shadow: 0px 0px 3px #848484;
+}

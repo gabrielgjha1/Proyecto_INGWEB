@@ -12,9 +12,9 @@ class Docente_Model{
     function Datos(){
         $consulta=$this->con->query("select * from Docente;");
         while($datos=$consulta->fetch_assoc()){
-            $this->docente=$datos;
+            $this->docente[]=$datos;
         }
-        return $datos;
+        return $this->docente;
     }
 }
 

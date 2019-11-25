@@ -18,8 +18,8 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a href="#" class="dropdown-item">Actualizar Informacion</a>
-                            <a href="#" class="dropdown-item">Editar Informacion</a>
-                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item">Consultar Informacion</a>
+                            <a href="?controller=Docente&action=mostrar" class="dropdown-item">Listar Docentes</a>
+                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item">Listar Administrativo</a>
 
                         </div>
                     </li>

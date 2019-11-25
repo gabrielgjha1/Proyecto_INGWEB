@@ -9,7 +9,7 @@ class AdministrativoModel{
         $this ->admin=array();
     }
     function listar_datos (){
-        $consulta=$this->con->query("select * from Administrativo");
+        $consulta=$this->con->query("select * from Administrativo;");
         while ($datos=$consulta->fetch_assoc()){
             $this->admin[]=$datos;
         }

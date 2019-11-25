@@ -9,6 +9,7 @@
         function Mostrar(){
             $mostrar=new Docente_Model();
             $resultados=$mostrar->Datos();
+            require_once("Views/DocenteView/listar.php");
         }
 
     }

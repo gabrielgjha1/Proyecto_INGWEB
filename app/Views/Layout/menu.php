@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a href="#" class="navbar-brand">UTP</a>
+            <a href="?controller=Home&action=mensaje" class="navbar-brand">UTP</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,7 +19,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a href="#" class="dropdown-item">Actualizar Informacion</a>
                             <a href="#" class="dropdown-item">Editar Informacion</a>
-                            <a href="#" class="dropdown-item">Consultar Informacion</a>
+                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item">Consultar Informacion</a>
 
                         </div>
                     </li>

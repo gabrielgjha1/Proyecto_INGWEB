@@ -3,7 +3,7 @@
 
 $controllers = array(
     'Home' => ['mensaje'],
-    'Docente' => ['mostrar'],
+    'Docente' => ['mostrar','registrar'],
     'Administrativo' => ['mostrar']
 );
 

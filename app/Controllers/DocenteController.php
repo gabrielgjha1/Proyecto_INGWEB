@@ -11,6 +11,12 @@
             $resultados=$mostrar->Datos();
             require_once("Views/DocenteView/listar.php");
         }
+        function Registrar(){
+            require_once ('Views/DocenteView/registrar.php');
+            $registrar=new Docente_Model();
+            $resultado=$registrar->Registro();
+
+        }
 
     }
 ?>

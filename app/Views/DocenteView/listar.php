@@ -5,7 +5,7 @@
 
         <h2 class="mt-2">Docentes</h2>
         <div class="table-responsive">
-            <table class="table table-striped table-sm table-hover">
+            <table class="table table-striped table-sm table-hover table-bordered">
                 <thead>
                 <tr>
                     <th>nombre</th>

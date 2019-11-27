@@ -29,12 +29,12 @@ class Docente_Model{
 
         $resultado=mysqli_query($this->con,$insertar);
         if ($resultado){
-            $respuesta="bien";
+            $respuesta="Caso de prueba exitoso";
         }
         else {
-            $respuesta="error";
+            $respuesta="Caso de prueba fallido";
         }
-        return $genero;
+        return $respuesta;
     }
 }
 

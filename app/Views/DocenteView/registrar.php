@@ -98,13 +98,35 @@
                         </div>
                     </div>
 
-                        <label for="gobierno">gobierno</label>
+                        <label for="gobierno">gobiernos</label>
                         <input type="text" name="gobierno" id="gobierno" class="form-control">
 
 
                     <br>
-                    <button type="submit" id="boton" class="btn btn-primary btn-lg">Enviar</button>
+                    <button type="button" id="boton" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#exampleModal">Enviar</button>
                 </form>
-                <?php echo  $resultado; ?>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Registro Docente</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <?php echo  $resultado; ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>

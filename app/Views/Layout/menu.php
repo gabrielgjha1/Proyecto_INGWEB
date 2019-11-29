@@ -5,7 +5,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="menuNavegacion">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -13,13 +12,13 @@
                     </li>
                     <!-- Boton Desplegable -->
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" name="menu" data-toggle="dropdown">
                             Administracion docente
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a href="?controller=Docente&action=registrar" class="dropdown-item">Registrar docente</a>
-                            <a href="?controller=Docente&action=mostrar" class="dropdown-item">Listar Docentes</a>
-                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item">Listar Administrativo</a>
+                            <a href="?controller=Docente&action=registrar" class="dropdown-item" id="registrar">Registrar docente</a>
+                            <a href="?controller=Docente&action=mostrar" class="dropdown-item" id="listard">Listar Docentes</a>
+                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item" id="listara">Listar Administrativo</a>
 
                         </div>
                     </li>

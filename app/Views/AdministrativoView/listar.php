@@ -59,5 +59,7 @@
             </tbody>
         </table>
     </div>
+    <a href="?controller=Home&action=mensaje" class="btn btn-primary mt-5" role="button">Salir</a>
+
 </main>
 </div>

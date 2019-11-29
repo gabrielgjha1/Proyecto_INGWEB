@@ -7,6 +7,8 @@ if (isset($_GET["action"]) && isset($_GET["controller"]) ){
 }
 else {
     $controller="Home";
+
+
     $action="mensaje";
 }
 

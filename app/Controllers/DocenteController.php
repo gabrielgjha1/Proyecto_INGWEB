@@ -41,5 +41,17 @@
             require_once ('Views/DocenteView/registrar.php');
         }
 
+        function crear_u(){
+            $mostrar = new Docente_Model();
+            $usuario=$_POST["usuario"];
+            $contrasena=$_POST["contrasena"];
+            $correo=$_POST["correo"];
+            $rol=$_POST["rol"];
+            $resultado=$mostrar->crear_usuario($usuario,$contrasena,$correo,$rol);
+            require_once ("Views/DocenteView/crear_usuario.php");
+
+
+        }
+
     }
 ?>

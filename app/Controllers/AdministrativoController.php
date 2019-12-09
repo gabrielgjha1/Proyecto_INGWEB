@@ -19,7 +19,8 @@
             $usuario=$_POST["usuario"];
             $contrasena=$_POST["contrasena"];
             $correo=$_POST["correo"];
-            $resultado=$mostrar->crear_usuario($usuario,$contrasena,$correo);
+            $rol=$_POST["rol"];
+            $resultado=$mostrar->crear_usuario($usuario,$contrasena,$correo,$rol);
             require_once ("Views/AdministrativoView/crear_usuario.php");
 
             

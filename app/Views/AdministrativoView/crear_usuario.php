@@ -13,15 +13,21 @@
                 <div class="form-group row">
                     <div class="col-6">
                         <label for="Contrasena">Ingrese contraseña</label>
-                        <input type="text" name="contrasena" id="contrasena" class="form-control">
+                        <input type="password" name="contrasena" id="contrasena" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-6">
                         <label for="Contrasena">Repita contraseña</label>
-                        <input type="text" name="contrasena" id="contrasena" class="form-control">
+                        <input type="password" name="contrasena" id="contrasena" class="form-control">
                     </div>
                 </div>
+            <div class="form-group row">
+                <div class="col-6">
+                    <label for="rol">Ingrese rol</label>
+                    <input type="number" name="rol" id="rol" class="form-control">
+                </div>
+            </div>
                 <div class="form-group row">
                     <div class="col-6">
                         <label for="correo">Ingrese correo</label>

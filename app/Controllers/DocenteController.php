@@ -34,9 +34,10 @@
             $cargoadm=$_POST["cargoadm"];
             $gobierno=$_POST["gobierno"];
 
-            $resultado=$registrar->Registro($nombre,$apellido2,$apellido1,$nombre2,$cedula,$genero,$civil,$sangre,
-            $usuario,$provincia,$distrito,$corregimiento,$ubicesp,$telefono,$categoria,$ubi,$departamento,$cargoadm,
-            $gobierno);
+           $resultado=$registrar->Registro($nombre,$apellido2,$apellido1,$nombre2,$cedula,$genero,$civil,$sangre,
+           $usuario,$provincia,$distrito,$corregimiento,$ubicesp,$telefono,$categoria,$ubi,$departamento,$cargoadm,
+          $gobierno);
+            $resultado=$nombre;
             require_once ('Views/DocenteView/registrar.php');
         }
 

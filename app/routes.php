@@ -4,17 +4,17 @@
 $controllers = array(
     'Home' => ['mensaje'],
     'Docente' => ['mostrar','registrar'],
-    'Administrativo' => ['mostrar']
+    'Administrativo' => ['mostrar','crear_u']
 );
 
 if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
         call($controller, $action);
     } else {
-        call('Home', 'index');
+        call('Home', 'mensaje');
     }
 } else {
-    call('Home', 'index');
+    call('Home', 'mensaje');
 }
 
 function call($controller, $action)

@@ -103,7 +103,7 @@
 
 
                     <br>
-                    <button type="button" id="boton" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#exampleModal">Enviar</button>
+                    <button type="submit" id="boton" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#exampleModal">Enviar</button>
                 </form>
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 

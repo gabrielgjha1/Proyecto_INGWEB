@@ -15,6 +15,14 @@ class AdministrativoModel{
         }
         return $this->admin;
     }
+    function crear_usuario($usuario,$contrasena,$correo){
+        $asunto="Su usuario y contraseña";
+        $mensaje="su usuario es: $usuario \nSu contraseña es: $contrasena \nProceda a
+        iniciar sesiòn y registrarse ";
+
+        mail($correo,$asunto,$mensaje);
+        return $correo;
+    }
 }
 
 ?>

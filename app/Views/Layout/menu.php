@@ -19,7 +19,7 @@
                             <a href="?controller=Docente&action=registrar" class="dropdown-item" id="registrar">Registrar docente</a>
                             <a href="?controller=Docente&action=mostrar" class="dropdown-item" id="listard">Listar Docentes</a>
                             <a href="?controller=Administrativo&action=mostrar" class="dropdown-item" id="listara">Listar Administrativo</a>
-
+                            <a href="?controller=Administrativo&action=crear_u" class="dropdown-item" id="usuario">Crear usuarios</a>
                         </div>
                     </li>
                     <li class="nav-item">

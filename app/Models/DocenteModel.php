@@ -19,10 +19,47 @@ class Docente_Model
         return $this->docente;
     }
 
-    public function Registro($nombre, $apellido2, $apellido1, $nombre2, $cedula, $genero, $civil, $sangre,
-                             $usuario, $provincia, $distrito, $corregimiento, $ubicesp, $telefono, $categoria, $ubi, $departamento, $cargoadm,
-                             $gobierno)
+    public function Traer_datos(){
+        if($resultado = mysqli_query($this->con, "SELECT * FROM Docente WHERE cedula = '8-888-888';", MYSQLI_USE_RESULT)) {
+            $formulario = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+        }
+        return $formulario;
+    }
+    public function Modificar_datos($nombre,$apellido2,$apellido1,$nombre2,$cedula){
+        $cambios=mysqli_query($this->con,"UPDATE Docente set nombre='$nombre',Segundo_apellido='$apellido2',primer_apellido='$apellido1'
+                    ,Segundo_nombre='$nombre2',cedula='$cedula' WHERE cedula='$cedula'");
+
+        if ($cambios){
+            return "modificado correctamente";
+        }else{
+            return "Error al modificar datos";
+        }
+
+
+    }
+
+
+    public function Registro()
     {
+        $nombre=$_POST["nombre"];
+        $apellido2=$_POST["apellido2"];
+        $apellido1=$_POST["apellido1"];
+        $nombre2=$_POST["nombre2"];
+        $cedula=$_POST["cedula"];
+        $genero=$_POST["genero"];
+        $civil=$_POST["civil"];
+        $sangre=$_POST["sangre"];
+        $usuario=$_POST["usuario"];
+        $provincia=$_POST["provincia"];
+        $distrito=$_POST["distrito"];
+        $corregimiento=$_POST["corregimiento"];
+        $ubicesp=$_POST["ubicesp"];
+        $telefono=$_POST["telefono"];
+        $categoria=$_POST["categoria"];
+        $ubi=$_POST["ubi"];
+        $departamento=$_POST["departamento"];
+        $cargoadm=$_POST["cargoadm"];
+        $gobierno=$_POST["gobierno"];
 
         $insertar = "INSERT INTO Docente(nombre,Segundo_apellido,primer_apellido,Segundo_nombre,cedula,
                                 genero,Estado_civil,Tipo_sangre,Usuario_Id_usuario,provincia,Distrito,
@@ -33,9 +70,9 @@ class Docente_Model
 
         $resultado = mysqli_query($this->con, $insertar);
         if ($resultado) {
-            $respuesta = "Caso de prueba exitoso";
+            $respuesta = "Registro Exitoso";
         } else {
-            $respuesta = "Caso de prueba fallido";
+            $respuesta = "Registro Fallido";
         }
         return $respuesta;
     }
@@ -91,7 +128,7 @@ class Docente_Model
 
 
         } else {
-            $resultado= "Error";
+            $resultado= "Error,revisar datos";
 
 
         }

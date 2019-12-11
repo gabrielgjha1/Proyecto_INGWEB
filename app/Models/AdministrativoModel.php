@@ -15,7 +15,13 @@ class AdministrativoModel{
         }
         return $this->admin;
     }
-    function crear_usuario($usuario,$contrasena,$correo,$rol){
+    function crear_usuario(){
+
+        $usuario=$_POST["usuario"];
+        $contrasena=$_POST["contrasena"];
+        $correo=$_POST["correo"];
+        $rol=$_POST["rol"];
+
         $asunto="Su usuario y contraseña";
         $mensaje="su usuario es: $usuario \nSu contraseña es: $contrasena \nProceda a
         iniciar sesiòn y registrarse ";
@@ -25,8 +31,6 @@ class AdministrativoModel{
 
         $resultado = mysqli_query($this->con, $insertar);
         if ($resultado) {
-
-            $resultado = mysqli_query($this->con, $insertar);
 
             require 'a/PHPMailer.php';
             require 'a/SMTP.php';
@@ -59,13 +63,11 @@ class AdministrativoModel{
             if (!$mail->send()) {
                 $respuesta= "Error al enviar el E-Mail: " . $mail->ErrorInfo;
             } else {
-                $respuesta="E-Mail enviado y datos guardados";
+                $respuesta="Datos guardados y enviados al email";
             }
 
-            return $resultado;
-
         } else {
-            $respuesta = "Caso de prueba fallido";
+            $respuesta = "Error, revisar usuario o contraseña";
         }
 
         return $respuesta;

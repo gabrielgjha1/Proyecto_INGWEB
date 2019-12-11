@@ -16,12 +16,9 @@
         }
         function crear_u(){
             $mostrar = new AdministrativoModel();
-            $usuario=$_POST["usuario"];
-            $contrasena=$_POST["contrasena"];
-            $correo=$_POST["correo"];
-            $rol=$_POST["rol"];
-            $resultado=$mostrar->crear_usuario($usuario,$contrasena,$correo,$rol);
+            $resultado=$mostrar->crear_usuario();
             require_once ("Views/AdministrativoView/crear_usuario.php");
+
 
             
         }

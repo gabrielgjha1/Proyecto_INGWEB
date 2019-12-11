@@ -34,9 +34,10 @@
                     <input type="number" name="rol" id="rol" class="form-control">
                 </div>
             </div>
-                <input type="submit"  value="Enviar" class="btn btn-secondary">
-                <?php echo $resultado ?>
+                <input type="submit"  value="Enviar" onclick="confirm('<? echo $resultado ?>')" class="btn btn-secondary">
+
                 </form>
+
     </div>
 
 

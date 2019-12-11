@@ -13,18 +13,19 @@
                     <!-- Boton Desplegable -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" name="menu" data-toggle="dropdown">
-                            Administracion docente
+                            Administración docente
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a href="?controller=Docente&action=registrar" class="dropdown-item" id="registrar">Registrar docente</a>
-                            <a href="?controller=Docente&action=mostrar" class="dropdown-item" id="listard">Listar Docentes</a>
-                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item" id="listara">Listar Administrativo</a>
-                            <a href="?controller=Administrativo&action=crear_u" class="dropdown-item" id="usuario">Crear usuarios administrativo</a>
-                            <a href="?controller=Docente&action=crear_u" class="dropdown-item" id="usuario">Crear usuarios docentes</a>
+                            <a href="?controller=Docente&action=mostrar" class="dropdown-item" id="listard">Listar docentes</a>
+                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item" id="listara">Listar administrativos</a>
+                            <a href="?controller=Administrativo&action=crear_u" class="dropdown-item" id="usuario">Crear usuario administrativo</a>
+                            <a href="?controller=Docente&action=crear_u" class="dropdown-item" id="usuario">Crear usuario docente</a>
+                            <a href="?controller=Docente&action=modificar" class="dropdown-item" id="usuario">Modificar datos docente</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Reparacion de daños</a>
+                        <a href="#" class="nav-link">Reparación de daños</a>
                     </li>
                 </ul>
 

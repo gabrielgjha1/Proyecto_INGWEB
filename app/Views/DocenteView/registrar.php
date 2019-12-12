@@ -2,7 +2,7 @@
             <h2 class="mt-2">Registro Docente</h2>
         <main class="row mt-3 ">
             <div class="col">
-                <form action="?controller=Docente&action=registrar" method="POST">
+                <form action="?controller=Docente&action=Registrar_titulos" method="POST">
                     <div class="form-group row">
                         <div class="col-6 md-12">
                         <label for="nombre">Nombre</label>
@@ -44,6 +44,7 @@
                         <div class="col">
                         <label for="civil">Estado civil</label>
                         <select name="civil" id="civil" class="form-control">
+                            <option value="Casado">Viudo</option>
                             <option value="Casado">Casado</option>
                             <option value="Soltero">Soltero</option>
                         </select>
@@ -95,26 +96,33 @@
                     </div>
                     <div class="form-group row">
                         <div class="col">
-                        <label for="categoria">Categoria del administrativo</label>
+                        <label for="categoria">Categoria del docente</label>
                         <select name="categoria" id="categoria" class="form-control">
-                            <option value="Apoyo">Apoyo</option>
-                            <option value="Auxiliar">Auxiliar</option>
-                            <option value="Asistencial">Asistencial</option>
-                            <option value="Técnico">Técnico</option>
-                            <option value="Profesional">Profesional</option>
-                            <option value="Especialista/Ejecutivo">Especialista/Ejecutivo</option>
+                            <option value="Apoyo">Tiempo completo</option>
+                            <option value="Auxiliar">Tiempo parcial</option>
 
                         </select>
                         </div>
                         <div class="col">
                         <label for="ubi">Ubicación</label>
-                        <input type="text" name="ubi" id="ubi" class="form-control">
+                            <select name="ubi" id="ubi" class="form-control">
+                                <option value="Sede">Sede</option>
+                                <option value="Azuero">Azuero</option>
+                                <option value="Bocas del Toro">Bocas del Toro</option>
+                                <option value="Chiriqí">Chiriqí</option>
+                                <option value="Coclè">Coclè</option>
+                                <option value="Panamá Oeste">Panamá Oeste</option>
+                                <option value="Veraguas">Veraguas</option>
+                            </select>
+
+
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col">
                         <label for="departamento">Departamento</label>
                         <select name="departamento" id="departamento" class="form-control">
+                            <option value="No definido">No definido</option>
                             <option value="Arquitectura y Redes de computadoras">Arquitectura y Redes de computadoras</option>
                             <option value="Computaciòn y simulaciòn de sistemas">Computación y simulación de sistemas</option>
                             <option value="Ingenierìa de software">Ingeniería de software</option>

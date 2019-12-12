@@ -77,6 +77,29 @@ class Docente_Model
         return $respuesta;
     }
 
+    public function Registrar_titulos(){
+
+        $titulo_ob=$_POST["titulo_ob"];
+        $institucion=$_POST["institucion"];
+        $tituload=$_POST["tituload"];
+        $nivel=$_POST["nivel"];
+        $año=$_POST["año"];
+
+        $insertar="INSERT INTO Docente_prep_academico (Titulo_obtenido,Nivel,Año,Institucion,Titulo_adjunto,Docente_cedula)
+                    VALUES ('$titulo_ob','$nivel','$año','$institucion','$tituload','1-884-587')";
+
+        $resltado=mysqli_query($this->con,$insertar);
+
+        if ($resltado){
+            $respuesta="Registro Exitoso, si desea insertar otro titulo hagalo";
+        }
+        else{
+            $respuesta="Error,verificar datos";
+        }
+        return $respuesta;
+
+    }
+
     function crear_usuario($usuario, $contrasena, $correo, $rol)
     {
         $asunto = "Su usuario y contraseña";

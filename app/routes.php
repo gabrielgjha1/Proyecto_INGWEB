@@ -3,7 +3,7 @@
 
 $controllers = array(
     'Home' => ['mensaje'],
-    'Docente' => ['mostrar','registrar','crear_u','modificar'],
+    'Docente' => ['mostrar','registrar','crear_u','modificar','Registrar_titulos'],
     'Administrativo' => ['mostrar','crear_u']);
 
 if (array_key_exists($controller, $controllers)) {

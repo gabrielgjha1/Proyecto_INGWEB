@@ -21,6 +21,12 @@
 
         }
 
+        function Registrar_titulos(){
+            $registrar=new Docente_Model();
+            $resultado=$registrar->Registrar_titulos();
+            require_once ('Views/DocenteView/registrar_titulos.php');
+        }
+
         function crear_u(){
 
             $mostrar = new Docente_Model();
@@ -47,7 +53,6 @@
 
             $resultados2=$mostrar->Modificar_datos($nombre,$apellido2,$apellido1,$nombre2,$cedula);
             require_once("Views/DocenteView/modificar.php");
-
 
         }
 

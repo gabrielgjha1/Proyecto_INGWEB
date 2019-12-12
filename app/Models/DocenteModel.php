@@ -84,6 +84,7 @@ class Docente_Model
         $tituload=$_POST["tituload"];
         $nivel=$_POST["nivel"];
         $año=$_POST["año"];
+        if ($titulo_ob!="" && $institucion!="" && $tituload!="" && $nivel!="" && $año!=""){
 
         $insertar="INSERT INTO Docente_prep_academico (Titulo_obtenido,Nivel,Año,Institucion,Titulo_adjunto,Docente_cedula)
                     VALUES ('$titulo_ob','$nivel','$año','$institucion','$tituload','1-884-587')";
@@ -96,8 +97,12 @@ class Docente_Model
         else{
             $respuesta="Error,verificar datos";
         }
-        return $respuesta;
 
+        }
+        else{
+            $respuesta="Error,verificar datos";
+        }
+        return $respuesta;
     }
 
     function crear_usuario($usuario, $contrasena, $correo, $rol)

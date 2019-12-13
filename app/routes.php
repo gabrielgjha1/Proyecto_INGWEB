@@ -4,7 +4,10 @@
 $controllers = array(
     'Home' => ['mensaje'],
     'Docente' => ['mostrar','registrar','crear_u','modificar','Registrar_titulos'],
-    'Administrativo' => ['mostrar','crear_u']);
+    'Administrativo' => ['mostrar','crear_u'],
+    'Login'=>['login']);
+
+
 
 if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
@@ -32,8 +35,13 @@ function call($controller, $action)
         case 'Administrativo':
             $controller = new AdministrativoController();
             break;
+
+        case 'Login':
+            $controller =new LoginController();
+            break;
+
         default:
-            # código...
+
             break;
     }
     $controller->{$action}();

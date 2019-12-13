@@ -18,20 +18,19 @@
                 <div class="col-12 img">
                     <img src="img/index.png" alt="">
                 </div>
-                <form class="col-12" action="">
+                <form class="col-12" method="POST" action="">
                     <div class="form-group">
-                        <label for="Usuario">Ingrese Usuario</label>
-                        <input type="text" name="Usuario" id="Usuario" placeholder="Usuario" class="form-control">
+                        <label for="usuario">Ingrese Usuario</label>
+                        <input type="text" name="usuario" id="usuario" required placeholder="Usuario" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="Contra">Ingrese Contraseña</label>
-                        <input type="password" name="Contra" id="Contra" placeholder="Contraseña" class="form-control">
+                        <label for="contra">Ingrese Contraseña</label>
+                        <input type="password" name="contra" id="contra"  required placeholder="Contraseña" class="form-control">
                     </div>
-                    <input type="button" value="Enviar" class="btn btn-primary">
+                    <input type="submit" value="Enviar" onclick="confirm('<? echo $resultado  ?>')" class="btn btn-primary">
                     <div class="forgot"> <br>
                         <a href="">Olvide la contraseña</a>
                     </div>
-
 
                 </form>
             </div>

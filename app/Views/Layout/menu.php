@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a href="?controller=Home&action=mensaje" class="navbar-brand">UTP</a>
+            <a href="?controller=Home&action=mensaje&log=1" class="navbar-brand">UTP</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar Menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -16,12 +16,11 @@
                             Administración docente
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a href="?controller=Docente&action=registrar" class="dropdown-item" id="registrar">Registrar docente</a>
-                            <a href="?controller=Docente&action=mostrar" class="dropdown-item" id="listard">Listar docentes</a>
-                            <a href="?controller=Administrativo&action=mostrar" class="dropdown-item" id="listara">Listar administrativos</a>
-                            <a href="?controller=Administrativo&action=crear_u" class="dropdown-item" id="usuario">Crear usuario administrativo</a>
-                            <a href="?controller=Docente&action=crear_u" class="dropdown-item" id="usuario">Crear usuario docente</a>
-                            <a href="?controller=Docente&action=modificar" class="dropdown-item" id="usuario">Modificar datos docente</a>
+                            <a href="?controller=Docente&action=mostrar&log=1" class="dropdown-item" id="listard">Listar docentes</a>
+                            <a href="?controller=Administrativo&action=mostrar&log=1" class="dropdown-item" id="listara">Listar administrativos</a>
+                            <a href="?controller=Administrativo&action=crear_u&log=1" class="dropdown-item" id="usuario">Crear usuario administrativo</a>
+                            <a href="?controller=Docente&action=crear_u&log=1" class="dropdown-item" id="usuario">Crear usuario docente</a>
+
                         </div>
                     </li>
                     <li class="nav-item">

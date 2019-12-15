@@ -3,7 +3,7 @@
             <h2 class="mt-2">Modificar datos</h2>
         <main class="row mt-3 ">
             <div class="col">
-                <form action="?controller=Home&action=mensaje" method="POST">
+                <form action="" method="POST">
                     <div class="form-group row">
                         <div class="col-6">
                         <label for="nombre">Nombre</label>
@@ -33,10 +33,13 @@
                         </div>
                     </div>
 
-
                     <br>
+
                     <button type="submit" id="boton" onclick="confirm('<? echo $resultados2 ?>')" class="btn btn-primary btn-lg"  >Enviar</button>
+                    <a class="btn btn-primary btn-lg" href="?controller=Docente&action=modificar&log=2" >Actualizar</a>
                 </form>
+
+
                 </div>
             </div>
         </div>

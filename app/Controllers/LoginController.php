@@ -1,5 +1,6 @@
 <?php
     require_once ('Models/LoginModel.php');
+require_once ('index.php');
 class LoginController{
 
     function __construct()
@@ -9,12 +10,13 @@ class LoginController{
     function login() {
 
         $mostrar = new LoginModel();
-        $resultado = $mostrar->Validar_datos();
+        $resultado1=$mostrar->Validar_datos();
 
         require_once ("Views/LoginView/login.php");
 
-
     }
+
+
 
 }
 

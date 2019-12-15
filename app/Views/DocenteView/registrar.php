@@ -2,7 +2,7 @@
             <h2 class="mt-2">Registro Docente</h2>
         <main class="row mt-3 ">
             <div class="col">
-                <form action="?controller=Docente&action=Registrar_titulos" method="POST">
+                <form action="?controller=Docente&action=Registrar_titulos&log=2" method="POST">
                     <div class="form-group row">
                         <div class="col-6 md-12">
                         <label for="nombre">Nombre</label>
@@ -132,7 +132,24 @@
                         </div>
                         <div class="col">
                         <label for="cargoadm">Cargo administrativo</label>
-                        <input type="text" name="cargoadm" id="cargoadm" class="form-control" required>
+                            <select name="cargoadm" id="cargoadm" class="form-control" required>
+                                <option value="Sin Cargo">Sin Cargo</option>
+                                <option value="Decano">Decano</option>
+                                <option value="Vicedecano">Vicedecano</option>
+                                <option value="Jefe de departamento">Jefe de departamento</option>
+                                <option value="Coordinador de carrera">Coordinador de carrera</option>
+                                <option value="Coordinador de FISC en centro regional">Coordinador de FISC en centro regional</option>
+                                <option value="Coordinador de Extension">Coordinador de Extension</option>
+                                <option value="Coordinador de postgrado">Coordinador de postgrado</option>
+                                <option value="Coordinador de investigacion">Coordinador de investigacion</option>
+                                <option value="Director de Centro Regional">Director de Centro Regional</option>
+                                <option value="Subdirector Academico de Centro Regional">Subdirector Academico de Centro Regional</option>
+                                <option value="Subdirector Administrativo de Centro Regional">Subdirector Administrativo de Centro Regional</option>
+                                <option value="Subdirector investigacion, postgrado y extension de Centro Regional">Subdirector investigacion, postgrado y extension de Centro Regional</option>
+                                <option value="Coordinador de extension en centro regional">Coordinador de extension en centro regional</option>
+                                <option value="Coordinador de postgrado en centro regional">Coordinador de postgrado en centro regional</option>
+                                <option value="Coordinador de investigacion en centro regional">Coordinador de investigacion en centro regional</option>
+                                </select>
                         </div>
                     </div>
                    

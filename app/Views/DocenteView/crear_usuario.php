@@ -2,7 +2,7 @@
     <div class="container">
         <h2 class="mt-2">Crear usuario docente</h2>
         <main>
-        <form action="?controller=Docente&action=crear_u" method="post">
+        <form action="?controller=Docente&action=crear_u&log=1" method="post">
                 <div class="form-group row">
                     <div class="col-6">
                         <label for="usuario">Ingrese usuario</label>

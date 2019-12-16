@@ -7,12 +7,17 @@ class LoginController{
     {
     }
 
+    function  add(){
+        require_once ("Views/LoginView/login.php");
+    }
     function login() {
 
         $mostrar = new LoginModel();
         $resultado1=$mostrar->Validar_datos();
 
-        require_once ("Views/LoginView/login.php");
+        if ($resultado1=="usuario o contraseña incorrecta"){
+            require_once ("Views/LoginView/login.php");
+        }
 
     }
 

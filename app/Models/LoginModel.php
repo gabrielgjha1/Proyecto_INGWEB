@@ -33,7 +33,8 @@ class LoginModel
                 }
 
             }else{
-                 return "usuario o contraseña incorrecta";
+                $resultado="usuario o contraseña incorrecta";
+                 return $resultado;
             }
         }
 

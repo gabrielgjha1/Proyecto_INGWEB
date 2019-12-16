@@ -18,7 +18,7 @@
                 <div class="col-12 img">
                     <img src="img/index.png" alt="">
                 </div>
-                <form class="col-12" method="POST" action="">
+                <form class="col-12" method="POST" action="?controller=Login&action=login">
                     <div class="form-group">
                         <label for="usuario">Ingrese Usuario</label>
                         <input type="text" name="usuario" id="usuario" required placeholder="Usuario" class="form-control">
@@ -27,12 +27,18 @@
                         <label for="contra">Ingrese Contraseña</label>
                         <input type="password" name="contra" id="contra"  required placeholder="Contraseña" class="form-control">
                     </div>
-                    <input type="submit" value="Enviar" onclick="confirm('<? echo $resultado  ?>')" class="btn btn-primary">
+                    <input type="submit" value="Enviar" class="btn btn-primary">
                     <div class="forgot"> <br>
                         <a href="">Olvide la contraseña</a>
                     </div>
 
                 </form>
+                <?php
+                if ($resultado1=="usuario o contraseña incorrecta"){
+                    echo '<script language="javascript">alert("usuario o contraseña incorrecta");</script>';
+                }
+
+                ?>
             </div>
         </div>
     </main>

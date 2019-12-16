@@ -3,7 +3,7 @@
 require_once ('Db/Conexion.php');
 
 
-if (isset($_GET["action"]) && isset($_GET["controller"]) ){
+if (isset($_GET["action"]) && isset($_GET["controller"]) && $_GET["controller"]!="Login" ){
     $controller=$_GET["controller"];
     $action=$_GET["action"];
     $resultado1=$_GET["log"];
@@ -13,13 +13,17 @@ if (isset($_GET["action"]) && isset($_GET["controller"]) ){
         require_once ("Views/Layout/layout.php");
 
     }
-
-
-}
-
+    }
 else {
     $controller="Login";
-    $action="login";
+    $action="add";
+
+    if (isset($_GET["action"]) && isset($_GET["controller"])){
+        $controller=$_GET["controller"];
+        $action=$_GET["action"];
+
+
+    }
     require_once ('routes.php');
 }
 

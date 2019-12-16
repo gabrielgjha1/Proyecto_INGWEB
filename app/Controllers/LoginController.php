@@ -1,6 +1,6 @@
 <?php
     require_once ('Models/LoginModel.php');
-require_once ('index.php');
+    require_once ('index.php');
 class LoginController{
 
     function __construct()

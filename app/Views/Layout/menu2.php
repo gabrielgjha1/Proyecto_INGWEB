@@ -14,7 +14,7 @@
                             Administración docente
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a href="?controller=Docente&action=registrar&log=2" class="dropdown-item" id="registrar">Registrar docente</a>
+                            <a href="?controller=Docente&action=add&log=2" class="dropdown-item" id="registrar">Registrar docente</a>
                             <a href="?controller=Docente&action=modificar&log=2" class="dropdown-item" id="usuario">Modificar datos docente</a>
                         </div>
                     </li>

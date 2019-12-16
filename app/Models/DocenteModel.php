@@ -3,11 +3,13 @@ class Docente_Model
 {
     private $con;
     private $docente;
+    private $resultado;
 
     function __construct()
     {
         $this->con = Conexion::conectar();
         $this->docente = array();
+        $this->resultado;
     }
 
     public function Datos()
@@ -48,6 +50,7 @@ class Docente_Model
     public function Registro($nombre,$apellido2,$apellido1,$nombre2,$cedula,$genero,$civil,$sangre,$usuario,$provincia,$distrito,$corregimiento,$ubicesp,$telefono,$categoria, $ubi,$departamento,$cargoadm,$gobierno)
     {
 
+
         $insertar = "INSERT INTO Docente(nombre,Segundo_apellido,primer_apellido,Segundo_nombre,cedula,
                                 genero,Estado_civil,Tipo_sangre,Usuario_Id_usuario,provincia,Distrito,
                                 corregimiento,Direccion_especifica, Telefono,categoria_docente,ubicacion,
@@ -55,22 +58,19 @@ class Docente_Model
                                 '$genero','$civil','$sangre','$usuario','$provincia','$distrito','$corregimiento','$ubicesp','$telefono',
                                 '$categoria','$ubi','$departamento','$cargoadm','$gobierno');";
 
-        $resultado = mysqli_query($this->con, $insertar);
-        if ($resultado) {
-            $respuesta = "Registro Exitoso";
+        $this->resultado = mysqli_query($this->con, $insertar);
+        if ($this->resultado) {
+            return  $this->resultado = 1;
         } else {
-            $respuesta = "Registro Fallido";
+            return  $this->resultado = 2;
         }
-        return $respuesta;
+
+
+
     }
 
-    public function Registrar_titulos(){
+    public function Registrar_titulos($titulo_ob,$institucion,$tituload,$nivel,$año){
 
-        $titulo_ob=$_POST["titulo_ob"];
-        $institucion=$_POST["institucion"];
-        $tituload=$_POST["tituload"];
-        $nivel=$_POST["nivel"];
-        $año=$_POST["año"];
 
         if ($titulo_ob!="" && $institucion!="" && $tituload!="" && $nivel!="" && $año!=""){
 
@@ -90,7 +90,7 @@ class Docente_Model
         else{
             $respuesta="Error,verificar datos";
         }
-        return $respuesta;
+        return $resltado;
     }
 
     function crear_usuario($usuario, $contrasena, $correo, $rol)

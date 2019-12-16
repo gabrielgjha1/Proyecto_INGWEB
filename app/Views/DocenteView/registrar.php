@@ -1,8 +1,10 @@
         <div class="container">
+            <script>
+            </script>
             <h2 class="mt-2">Registro Docente</h2>
         <main class="row mt-3 ">
             <div class="col">
-                <form action="?controller=Docente&action=Registrar_titulos&log=2" method="POST">
+                <form action="?controller=Docente&action=Registrar&log=2" method="POST">
                     <div class="form-group row">
                         <div class="col-6 md-12">
                         <label for="nombre">Nombre</label>
@@ -162,8 +164,20 @@
                         </select>
     
                     <br>
-                    <input type="submit" id="boton" value="Enviar" class="btn btn-primary btn-lg" onclick="confirm('<? echo $resultado  ?>')">
+                    <div id="botones">
+                    <input type="submit" id="boton" value="Enviar" class="btn btn-primary btn-lg" onclick="confirm('Seguro que desea continuar')">
 
+
+
+
+
+                    </div>
                 </form>
+               <?php
+                if ($resultado==2){
+                    echo '<script language="javascript">alert("error");</script>';
+                }
+
+               ?>
             </div>
         </div>

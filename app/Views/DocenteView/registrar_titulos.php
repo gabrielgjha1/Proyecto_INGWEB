@@ -1,8 +1,14 @@
+<?php
+if ($resultado==2){
+    echo '<script language="javascript">alert("Datos guardados");</script>';
+}
+
+?>
 <div class="container">
     <h2 class="mt-2">Registro Docente</h2>
     <main class="row mt-3 ">
         <div class="col">
-            <form action="" method="POST">
+            <form action="?controller=Docente&action=Registrar_titulos&log=2" method="POST">
                 <div class="form-group row">
                     <div class="col-6 md-12">
                         <label for="titulo_ob">Titulo obtenido</label>
@@ -37,7 +43,7 @@
                         </select>
 
                 <br>
-                <input type="submit" id="boton" value="Enviar" onclick="confirm('<? echo $resultado  ?>')" class="btn btn-primary btn-lg" >
+                <input type="submit" id="boton" value="Enviar" onclick="confirm('<? echo $resultado1  ?>')" class="btn btn-primary btn-lg" >
 
             </form>
         </div>

@@ -13,6 +13,9 @@
             require_once("Views/DocenteView/listar.php");
 
         }
+        function add () {
+            require_once ('Views/DocenteView/registrar.php');
+        }
         function Registrar(){
             $nombre=$_POST["nombre"];
             $apellido2=$_POST["apellido2"];
@@ -33,20 +36,31 @@
             $departamento=$_POST["departamento"];
             $cargoadm=$_POST["cargoadm"];
             $gobierno=$_POST["gobierno"];
-            if ($cedula==""){
 
+                 $registrar = new Docente_Model();
+                 $resultado = $registrar->Registro($nombre, $apellido2, $apellido1, $nombre2, $cedula, $genero, $civil, $sangre
+                     , $usuario, $provincia, $distrito, $corregimiento, $ubicesp, $telefono, $categoria, $ubi, $departamento, $cargoadm, $gobierno);
 
-            $registrar=new Docente_Model();
-            $resultado=$registrar->Registro($nombre,$apellido2,$apellido1,$nombre2,$cedula,$genero,$civil,$sangre
-                ,$usuario,$provincia,$distrito,$corregimiento,$ubicesp,$telefono,$categoria, $ubi,$departamento,$cargoadm,$gobierno);
-            }
-            require_once ('Views/DocenteView/registrar.php');
+                 if ($resultado==1){
+                 require_once ('Views/DocenteView/registrar_titulos.php');
+             }
+             if ($resultado==2) {
+
+                 require_once('Views/DocenteView/registrar.php');
+
+             }
 
         }
 
         function Registrar_titulos(){
+            $titulo_ob=$_POST["titulo_ob"];
+            $institucion=$_POST["institucion"];
+            $tituload=$_POST["tituload"];
+            $nivel=$_POST["nivel"];
+            $año=$_POST["año"];
             $registrar=new Docente_Model();
-            $resultado=$registrar->Registrar_titulos();
+            $resultado1=$registrar->Registrar_titulos($titulo_ob,$institucion,$tituload,$nivel,$año);
+            echo $resultado1;
             require_once ('Views/DocenteView/registrar_titulos.php');
         }
 

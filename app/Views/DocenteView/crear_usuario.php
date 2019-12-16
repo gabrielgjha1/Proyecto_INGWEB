@@ -27,14 +27,14 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-6">
-                        <label for="correo">Ingrese correo</label>
-                        <input type="text" name="correo" id="correo" class="form-control">
+                        <label for="correo">Ingrese correo (aqui le llegara el usuario y la contraseña al docente)</label>
+                        <input type="text" name="correo"  id="correo" class="form-control">
                     </div>
                 </div>
             <div class="form-group row">
                 <div class="col-6">
                     <label for="rol">Ingrese rol</label>
-                    <input type="number" name="rol" id="rol" class="form-control">
+                    <input type="number" name="rol" value="1=Administrativo,2=Docente" id="rol" class="form-control">
                 </div>
             </div>
                 <input type="submit"  value="Enviar" onclick="confirm('<? echo $resultado ?>')" class="btn btn-secondary">

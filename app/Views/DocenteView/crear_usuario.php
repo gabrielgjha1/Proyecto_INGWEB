@@ -1,4 +1,7 @@
+<?php
+    session_start();
 
+?>
     <div class="container">
         <h2 class="mt-2">Crear usuario docente</h2>
         <main>

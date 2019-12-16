@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class LoginModel
 {
     private $con;
@@ -11,9 +11,7 @@ class LoginModel
         $this->docente = array();
     }
 
-    public function Validar_datos(){
-        $usuario=$_POST["usuario"];
-        $contra=$_POST["contra"];
+    public function Validar_datos($usuario,$contra){
 
         if (isset($_POST['usuario']) && isset($_POST['contra'])){
 
@@ -44,8 +42,6 @@ class LoginModel
         $usuario=$_POST["usuario"];
         $contra=$_POST["contra"];
         if ($resultado1== false){
-
-
 
 
     }

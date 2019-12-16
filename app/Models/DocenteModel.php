@@ -1,4 +1,5 @@
 <?php
+
 class Docente_Model
 {
     private $con;
@@ -50,6 +51,7 @@ class Docente_Model
     public function Registro($nombre,$apellido2,$apellido1,$nombre2,$cedula,$genero,$civil,$sangre,$usuario,$provincia,$distrito,$corregimiento,$ubicesp,$telefono,$categoria, $ubi,$departamento,$cargoadm,$gobierno)
     {
 
+        echo $_SESSION['usuario'];
 
         $insertar = "INSERT INTO Docente(nombre,Segundo_apellido,primer_apellido,Segundo_nombre,cedula,
                                 genero,Estado_civil,Tipo_sangre,Usuario_Id_usuario,provincia,Distrito,
@@ -71,26 +73,49 @@ class Docente_Model
 
     public function Registrar_titulos($titulo_ob,$institucion,$tituload,$nivel,$año){
 
-
-        if ($titulo_ob!="" && $institucion!="" && $tituload!="" && $nivel!="" && $año!=""){
-
         $insertar="INSERT INTO Docente_prep_academico (Titulo_obtenido,Nivel,Año,Institucion,Titulo_adjunto,Docente_cedula)
-                    VALUES ('$titulo_ob','$nivel','$año','$institucion','$tituload','1-884-587')";
+                    VALUES ('$titulo_ob','$nivel','$año','$institucion','$tituload','1')";
 
         $resltado=mysqli_query($this->con,$insertar);
 
         if ($resltado){
-            $respuesta="Registro Exitoso, si desea insertar otro titulo hagalo";
+            return 1;
         }
         else{
-            $respuesta="Error,verificar datos";
+            return 2;
         }
 
+
+    }
+
+    public function Registrar_capacitaciones($nombrecap,$horas,$año){
+
+        $insertar="INSERT INTO capacitaciones (nombre_capacita,horas,Año,Docente_cedula)
+                    VALUES ('$nombrecap','$horas','$año','1')";
+
+        $resltado=mysqli_query($this->con,$insertar);
+
+        if ($resltado){
+            return 1;
         }
-        else{
-            $respuesta="Error,verificar datos";
+        else {
+            return 2;
         }
-        return $resltado;
+
+    }
+
+    public function Registrar_familiares($Parentezco,$Nombre,$Locali,$prioridad,$telefono_of,$telefono_res,$celular,$correo){
+        $insertar="INSERT INTO Docente_familiar  (parentezco, nombre_completo, locallizacion, prioridad, telefono_residencial, telefono_oficina, celular, correo, Docente_cedula)
+                    VALUES ('$Parentezco','$Nombre','$Locali','$prioridad','$telefono_res','$telefono_of','$celular','$correo','1')";
+
+        $resltado=mysqli_query($this->con,$insertar);
+
+        if ($resltado){
+            return 1;
+        }
+        else {
+            return 2;
+        }
     }
 
     function crear_usuario($usuario, $contrasena, $correo, $rol)

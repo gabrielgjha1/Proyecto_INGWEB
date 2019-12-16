@@ -1,5 +1,8 @@
 <?php
-    require_once ("Models/DocenteModel.php");
+    session_start();
+
+
+require_once ("Models/DocenteModel.php");
     class DocenteController{
 
         function  __construct()
@@ -16,7 +19,15 @@
         function add () {
             require_once ('Views/DocenteView/registrar.php');
         }
+        function add2(){
+            require_once ('Views/DocenteView/registrar_capacitaciones.php');
+        }
+        function add3(){
+            require_once ('Views/DocenteView/registrar_familiar.php');
+        }
+
         function Registrar(){
+
             $nombre=$_POST["nombre"];
             $apellido2=$_POST["apellido2"];
             $apellido1=$_POST["apellido1"];
@@ -53,6 +64,7 @@
         }
 
         function Registrar_titulos(){
+            $_SESSION['resultadoss']=$resultadoss;
             $titulo_ob=$_POST["titulo_ob"];
             $institucion=$_POST["institucion"];
             $tituload=$_POST["tituload"];
@@ -64,13 +76,40 @@
             require_once ('Views/DocenteView/registrar_titulos.php');
         }
 
+        function Registrar_capacitaciones(){
+            $nombrecap=$_POST["nombrecap"];
+            $horas=$_POST["horas"];
+            $año=$_POST["año"];
+            $registrar=new Docente_Model();
+            $resultado2=$registrar->Registrar_capacitaciones($nombrecap,$horas,$año);
+            require_once ('Views/DocenteView/registrar_capacitaciones.php');
+        }
+        function Registrar_familiar(){
+            $Parentezco=$_POST["Parentezco"];
+            $Nombre=$_POST["Nombre"];
+            $Locali=$_POST["Locali"];
+            $prioridad=$_POST["prioridad"];
+            $telefono_of=$_POST["telefono_of"];
+            $telefono_res=$_POST["telefono_res"];
+            $celular=$_POST["celular"];
+            $correo=$_POST["correo"];
+
+            $registrar=new Docente_Model();
+            $resultado3=$registrar->Registrar_familiares($Parentezco,$Nombre,$Locali,$prioridad,$telefono_of,$telefono_res,$celular,$correo);
+            echo $resultado3;
+            require_once ('Views/DocenteView/registrar_familiar.php');
+
+        }
+
         function crear_u(){
+
 
             $mostrar = new Docente_Model();
             $usuario=$_POST["usuario"];
             $contrasena=$_POST["contrasena"];
             $correo=$_POST["correo"];
             $rol=$_POST["rol"];
+
             $resultado=$mostrar->crear_usuario($usuario,$contrasena,$correo,$rol);
             require_once ("Views/DocenteView/crear_usuario.php");
 

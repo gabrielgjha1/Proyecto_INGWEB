@@ -1,11 +1,15 @@
 <?php
-if ($resultado==2){
+session_start();
+if ($resultado==1){
     echo '<script language="javascript">alert("Datos guardados");</script>';
+    $resultado=0;
 }
 
 ?>
+
+
 <div class="container">
-    <h2 class="mt-2">Registro Docente</h2>
+    <h2 class="mt-2">Registro Docente Titulos</h2>
     <main class="row mt-3 ">
         <div class="col">
             <form action="?controller=Docente&action=Registrar_titulos&log=2" method="POST">
@@ -43,8 +47,23 @@ if ($resultado==2){
                         </select>
 
                 <br>
-                <input type="submit" id="boton" value="Enviar" onclick="confirm('<? echo $resultado1  ?>')" class="btn btn-primary btn-lg" >
+                <div id="botones">
 
+                <input type="submit" id="boton" value="Enviar" onclick="confirm('<? echo "Seguro que desea enviar este titulo ? "  ?>')" class="btn btn-primary btn-lg" >
+                    <a class="btn btn-primary btn-lg" href="?controller=Docente&action=add2&log=2">Siguiente</a>
+                </div>
             </form>
+
+            <?php
+            if ($resultado1==1){
+                echo '<script language="javascript">alert("Titulo registrado, rellene los campos si desea ingresar otro titulo y pulse enviar. si desea avanzar pulse siguiente");</script>';
+
+            }
+            elseif ($resultado1==2) {
+                echo '<script language="javascript">alert("Error en el registro");</script>';
+            }
+
+            ?>
         </div>
 </div>
+

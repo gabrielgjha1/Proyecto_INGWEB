@@ -1,4 +1,9 @@
+<?php
+    session_start();
+
+?>
 <head>
+
     <title>Secretaría Administrativa - FISC</title>
     <meta charset="utf-8">
 

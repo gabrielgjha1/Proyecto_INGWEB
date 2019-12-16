@@ -1,6 +1,13 @@
-        <div class="container">
-            <script>
-            </script>
+<?php
+    session_start();
+
+
+?>
+
+<div class="container">
+
+
+
             <h2 class="mt-2">Registro Docente</h2>
         <main class="row mt-3 ">
             <div class="col">
@@ -175,6 +182,7 @@
                 </form>
                <?php
                 if ($resultado==2){
+
                     echo '<script language="javascript">alert("error");</script>';
                 }
 

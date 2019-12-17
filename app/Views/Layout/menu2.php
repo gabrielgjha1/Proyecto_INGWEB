@@ -39,28 +39,5 @@ session_start();
             </div>
         </div>
     </nav>
-    <?php
-    $validar=$_SESSION['cedula'];
-    ?>
-
-    <script type="text/javascript">
-        var ultimoval = "<?php echo $validar;?>";
-    </script>
-    <script>
-
-        function ocultar() {
-            
-            var boton = document.getElementById('registrar');
-            if (ultimoval!=""){
-                boton.style.display="none";
-
-            }
-
-        }
-
-        ocultar();
-
-
-
-    </script>
+   
 </header>

@@ -9,13 +9,13 @@ if ($resultado==1){
 
 
 <div class="container">
-    <h2 class="mt-2">Registro Docente Titulos</h2>
+    <h2 class="mt-2">Registro Docente Títulos</h2>
     <main class="row mt-3 ">
         <div class="col">
             <form action="?controller=Docente&action=Registrar_titulos&log=2" method="POST">
                 <div class="form-group row">
                     <div class="col-6 md-12">
-                        <label for="titulo_ob">Titulo obtenido</label>
+                        <label for="titulo_ob">Título obtenido</label>
                         <input type="text" name="titulo_ob" id="Titulo_ob" class="form-control" required>
                     </div>
                     <div class="col-6 md-12">

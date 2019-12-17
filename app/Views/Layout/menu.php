@@ -21,8 +21,8 @@ session_start();
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a href="?controller=Docente&action=mostrar&log=1" class="dropdown-item" id="listard">Listar docentes</a>
-                            <a href="?controller=Administrativo&action=add6&log=1" class="dropdown-item" id="listard">Listar docentes por cedula</a>
                             <a href="?controller=Administrativo&action=mostrar&log=1" class="dropdown-item" id="listara">Listar administrativos</a>
+                            <a href="?controller=Administrativo&action=add6&log=1" class="dropdown-item" id="listard">Listar docentes por cédula</a>
                             <a href="?controller=Administrativo&action=add5&log=1" class="dropdown-item" id="usuario">Crear usuarios</a>
                         </div>
                     </li>

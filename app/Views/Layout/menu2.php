@@ -21,7 +21,7 @@ session_start();
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a href="?controller=Docente&action=add4&log=2" class="dropdown-item" id="usuario">Modificar datos docente</a>
-                            <a href="?controller=Docente&action=Registrar_titulos&log=2" class="dropdown-item" id="usuario">Registrar nuevo titulo,capacitación o familiar</a>
+                            <a href="?controller=Docente&action=Registrar_titulos&log=2" class="dropdown-item" id="usuario">Registrar nuevo título,capacitación o familiar</a>
                         </div>
                     </li>
                     <li class="nav-item">

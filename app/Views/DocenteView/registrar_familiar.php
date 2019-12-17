@@ -36,11 +36,11 @@ session_start();
 
                 <div class="form-group row">
                     <div class="col">
-                        <label for="telefono_of">Telefono_oficina</label>
+                        <label for="telefono_of">Télefono_oficina</label>
                         <input type="text" name="telefono_of" id="telefono_of" class="form-control" required>
                     </div>
                     <div class="col">
-                        <label for="telefono_res">Telefono Residencial</label>
+                        <label for="telefono_res">Télefono Residencial</label>
                         <input type="text" name="telefono_res" id="telefono_res" class="form-control" required>
 
                     </div>
@@ -48,7 +48,7 @@ session_start();
                 </div>
                 <div class="form-group row">
                     <div class="col">
-                        <label for="celular">Celular</label>
+                        <label for="celular">Célular</label>
                         <input type="text" name="celular" id="celular" class="form-control" required>
                     </div>
                     <div class="col">

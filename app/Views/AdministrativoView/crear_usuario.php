@@ -30,7 +30,7 @@
             </div>
                 <div class="form-group row">
                     <div class="col-6">
-                        <label for="correo">Ingrese correo (aqui le llegara el usuario y la contraseña al administrativo)</label>
+                        <label for="correo">Ingrese correo (aquí le llegara el usuario y la contraseña al administrativo)</label>
                         <input type="text" name="correo" id="correo" class="form-control">
                     </div>
                 </div>

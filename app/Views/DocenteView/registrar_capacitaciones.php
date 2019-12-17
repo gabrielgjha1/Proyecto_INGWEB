@@ -10,7 +10,7 @@ session_start();
             <form action="?controller=Docente&action=Registrar_capacitaciones&log=2" method="POST">
                 <div class="form-group row">
                     <div class="col-6 md-12">
-                        <label for="nombrecap">Nombre de la capacitacion</label>
+                        <label for="nombrecap">Nombre de la capacitación</label>
                         <input type="text" name="nombrecap" id="nombrecap" class="form-control" required>
                     </div>
                     <div class="col-6 md-12">

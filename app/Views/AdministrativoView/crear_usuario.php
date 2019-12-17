@@ -34,7 +34,9 @@
                         <input type="text" name="correo" id="correo" class="form-control">
                     </div>
                 </div>
+
                 <input type="submit"  value="Enviar" onclick="confirm('<? echo $resultado ?>')" class="btn btn-secondary">
+                <a class="btn btn-secondary" href="?controller=Home&action=mensaje&log=1"  > Salir</a>
 
                 </form>
 

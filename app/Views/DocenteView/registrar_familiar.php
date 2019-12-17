@@ -63,6 +63,7 @@ session_start();
 
                     <input type="submit" id="boton" value="Enviar" onclick="confirm('<? echo "Seguro que desea enviar este titulo ? "  ?>')" class="btn btn-primary btn-lg" >
                     <a class="btn btn-primary btn-lg" href="?controller=Home&action=mensaje&log=2">Siguiente</a>
+                    <a class="btn btn-primary btn-lg" href="?controller=Docente&action=add2&log=2">Atras</a>
                 </div>
             </form>
 

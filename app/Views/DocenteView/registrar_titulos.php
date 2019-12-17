@@ -57,7 +57,7 @@ if ($resultado==1){
             <?php
             if ($resultado1==1){
                 echo '<script language="javascript">alert("Titulo registrado, rellene los campos si desea ingresar otro titulo y pulse enviar. si desea avanzar pulse siguiente");</script>';
-
+                $resultado1=0;
             }
             elseif ($resultado1==2) {
                 echo '<script language="javascript">alert("Error en el registro");</script>';

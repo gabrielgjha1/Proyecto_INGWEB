@@ -19,16 +19,19 @@ $_SESSION['resultado']
 
                     <!-- Boton Desplegable -->
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" name="menu" data-toggle="dropdown">
-                            Administración docente
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown"  name="menu" data-toggle="dropdown">
+                            Perfil
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a href="?controller=Docente&action=add&log=2" class="dropdown-item" id="registrar">Registrar docente</a>
                             <a href="?controller=Docente&action=add4&log=2" class="dropdown-item" id="usuario">Modificar datos docente</a>
+                            <a href="?controller=Docente&action=Registrar_titulos&log=2" class="dropdown-item" id="usuario">Registrar nuevo titulo,capacitación o familiar</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Reparación de daños</a>
+                        <a  class="nav-link" id="registrar" href="?controller=Docente&action=add&log=2">Registrar docente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" id="registrar" href="http://localhost:8000">Salir</a>
                     </li>
                 </ul>
 

@@ -78,9 +78,18 @@
                         <input type="text" name="usuario" id="usuario" class="form-control" required>
                         </div>
                         <div class="col">
-                        <label for="provincia">Provincia</label>   
-                        
-                        <input type="number" name="provincia" id="provincia" class="form-control" required>
+                        <label for="provincia">Provincia</label>
+                            <select name="provincia" id="provincia" class="form-control" required>
+                                <option value="Bocas del Toro">Bocas del Toro</option>
+                                <option value="Coclé">Coclé</option>
+                                <option value="Colón">Colón</option>
+                                <option value="Chiriquí">Chiriquí</option>
+                                <option value="Darién">Darién</option>
+                                <option value="Herrera">Herrera</option>
+                                <option value="Panamá">Panamá</option>
+                                <option value=" Panamá Oeste"> Panamá Oeste</option>
+                                <option value="Veraguas">Veraguas</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -100,7 +109,7 @@
                         </div>
                         <div class="col">
                         <label for="telefono">Teléfono</label>
-                        <input type="text" name="telefono" id="telefono" class="form-control" required>
+                        <input type="tel" name="telefono" id="telefono" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -123,7 +132,6 @@
                                 <option value="Panamá Oeste">Panamá Oeste</option>
                                 <option value="Veraguas">Veraguas</option>
                             </select>
-
 
                         </div>
                     </div>

@@ -87,11 +87,13 @@ class Docente_Model
         }
 
 
-
     }
 
     public function Registrar_titulos($titulo_ob,$institucion,$tituload,$nivel,$año){
         $cedula=$_SESSION['cedula'];
+        if ($tituload!=""){
+
+
         $insertar="INSERT INTO Docente_prep_academico (Titulo_obtenido,Nivel,Año,Institucion,Titulo_adjunto,Docente_cedula)
                     VALUES ('$titulo_ob','$nivel','$año','$institucion','$tituload','$cedula')";
 
@@ -102,6 +104,8 @@ class Docente_Model
         }
         else{
             return 2;
+        }
+        return 0;
         }
 
 

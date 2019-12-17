@@ -29,6 +29,9 @@ session_start();
                     <li class="nav-item">
                         <a href="#" class="nav-link">Reparación de daños</a>
                     </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" id="registrar" href="http://localhost:8000">Salir</a>
+                    </li>
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0" action="">

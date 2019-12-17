@@ -139,6 +139,6 @@
             <br>
 
         </div>
-        <a href="?controller=Home&action=mensaje&log=2" class="btn btn-primary mt-5" role="button">Salir</a>
+        <a href="?controller=Home&action=mensaje&log=1" class="btn btn-primary mt-5" role="button">Salir</a>
     </main>
 </div>

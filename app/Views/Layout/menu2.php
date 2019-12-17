@@ -49,7 +49,7 @@ session_start();
     <script>
 
         function ocultar() {
-            alert(ultimoval);
+            
             var boton = document.getElementById('registrar');
             if (ultimoval!=""){
                 boton.style.display="none";

@@ -75,7 +75,6 @@ require_once ("Models/DocenteModel.php");
             $año=$_POST["año"];
             $registrar=new Docente_Model();
             $resultado1=$registrar->Registrar_titulos($titulo_ob,$institucion,$tituload,$nivel,$año);
-            echo $resultado1;
             require_once ('Views/DocenteView/registrar_titulos.php');
         }
 

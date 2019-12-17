@@ -3,7 +3,7 @@
             <h2 class="mt-2">Modificar datos</h2>
         <main class="row mt-3 ">
             <div class="col">
-                <form action="" method="POST">
+                <form action="?controller=Docente&action=modificar&log=2" method="POST">
                     <div class="form-group row">
                         <div class="col-6">
                         <label for="nombre">Nombre</label>

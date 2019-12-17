@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="Views/LoginView/css/index.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -16,7 +16,7 @@
         <div class="col-sm-8 main-section">
             <div class=" modal-content ">
                 <div class="col-12 img">
-                    <img src="img/index.png" alt="">
+                    <img src="Views/LoginView/img/index.png" alt="">
                 </div>
                 <form class="col-12" method="POST" action="?controller=Login&action=login">
                     <div class="form-group">

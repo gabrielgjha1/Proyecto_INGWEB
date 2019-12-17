@@ -1,7 +1,12 @@
 <?php
 session_start();
-
+$_SESSION['resultado']
 ?>
+<script>
+    function ocultar() {
+        var boton = document.getElementById('registrar');
+    }
+</script>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -19,7 +24,7 @@ session_start();
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a href="?controller=Docente&action=add&log=2" class="dropdown-item" id="registrar">Registrar docente</a>
-                            <a href="?controller=Docente&action=modificar&log=2" class="dropdown-item" id="usuario">Modificar datos docente</a>
+                            <a href="?controller=Docente&action=add4&log=2" class="dropdown-item" id="usuario">Modificar datos docente</a>
                         </div>
                     </li>
                     <li class="nav-item">

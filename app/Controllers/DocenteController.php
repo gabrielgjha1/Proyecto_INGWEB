@@ -12,7 +12,10 @@ require_once ("Models/DocenteModel.php");
         function Mostrar(){
 
             $mostrar=new Docente_Model();
-            $resultados=$mostrar->Datos();
+            $datos=$mostrar->Datos();
+            $titulo=$mostrar->Datos_titulos();
+            $capacitacion=$mostrar->Datos_capacitaciones();
+
             require_once("Views/DocenteView/listar.php");
 
         }
@@ -96,31 +99,28 @@ require_once ("Models/DocenteModel.php");
 
             $registrar=new Docente_Model();
             $resultado3=$registrar->Registrar_familiares($Parentezco,$Nombre,$Locali,$prioridad,$telefono_of,$telefono_res,$celular,$correo);
-            echo $resultado3;
+            $_SESSION['resultado']=$resultado3;
             require_once ('Views/DocenteView/registrar_familiar.php');
 
         }
 
-        function crear_u(){
 
 
-            $mostrar = new Docente_Model();
-            $usuario=$_POST["usuario"];
-            $contrasena=$_POST["contrasena"];
-            $correo=$_POST["correo"];
-            $rol=$_POST["rol"];
-
-            $resultado=$mostrar->crear_usuario($usuario,$contrasena,$correo,$rol);
-            require_once ("Views/DocenteView/crear_usuario.php");
-
-
-        }
-        function modificar(){
-
+        function add4(){
             $mostrar=new Docente_Model();
             $resultados=$mostrar->Traer_datos();
-
-            $resultados2=$mostrar->Modificar_datos();
+            require_once("Views/DocenteView/modificar.php");
+        }
+        function modificar(){
+            $cedula1=$_SESSION['cedula'];
+            $nombre=$_POST["nombre"];
+            $apellido2=$_POST["apellido2"];
+            $apellido1=$_POST["apellido1"];
+            $nombre2=$_POST["nombre2"];
+            $cedula=$_POST["cedula"];
+            $mostrar=new Docente_Model();
+            $resultados2=$mostrar->Modificar_datos($cedula1,$nombre,$apellido2,$apellido1,$nombre2,$cedula);
+            $resultados=$mostrar->Traer_datos();
             require_once("Views/DocenteView/modificar.php");
         }
 

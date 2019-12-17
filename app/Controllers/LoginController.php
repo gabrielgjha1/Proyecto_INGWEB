@@ -21,6 +21,9 @@ class LoginController{
 
         if ($resultado1=="usuario o contraseña incorrecta"){
             require_once ("Views/LoginView/login.php");
+            require_once ("Views/LoginView/css");
+            equire_once ("Views/LoginView/img");
+
         }
 
     }

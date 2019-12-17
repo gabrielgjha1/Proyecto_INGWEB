@@ -1,8 +1,11 @@
+
+
 .main-section {
     margin: 0 auto;
     margin-top: 20%;
     padding: 0;
 }
+body {background-color: rgb(201, 76, 76);}
 
 .modal-content {
     background-color: rgb(178, 216, 178) !important;

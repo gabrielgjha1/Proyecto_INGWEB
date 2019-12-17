@@ -3,8 +3,8 @@
 
 $controllers = array(
     'Home' => ['mensaje'],
-    'Docente' => ['mostrar','Registrar','crear_u','add','add2','add3','modificar','Registrar_titulos','Registrar_capacitaciones','Registrar_familiar'],
-    'Administrativo' => ['mostrar','crear_u'],
+    'Docente' => ['mostrar','Registrar','crear_u','add','add2','add3','add4','add5','modificar','Registrar_titulos','Registrar_capacitaciones','Registrar_familiar'],
+    'Administrativo' => ['mostrar','crear_u','add5','add6','listar_cedula'],
     'Login'=>['add','login']);
 
 

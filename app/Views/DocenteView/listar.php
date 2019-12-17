@@ -3,7 +3,7 @@
 
     <main role="main" class="col-md-12 ">
 
-        <h2 class="mt-2">Docentes</h2>
+        <h2 class="mt-2">Docentes informacion</h2>
         <div class="table-responsive">
             <table class="table table-striped table-sm table-hover table-bordered">
                 <thead>
@@ -27,12 +27,14 @@
                     <th>Departamento</th>
                     <th>Cargo</th>
                     <th>Gobierno_rep</th>
+                    <th>Titulo_obtenido</th>
+                    <th>Nivel</th>
 
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                foreach ($resultados as $dato) { ?>
+                foreach ($datos  as $dato) { ?>
                     <tr>
                         <td><?php echo $dato["nombre"] ?></td>
                         <td><?php echo $dato["Segundo_nombre"] ?></td>
@@ -53,11 +55,89 @@
                         <td><?php echo $dato["departamento"] ?></td>
                         <td><?php echo $dato["cargo_adm"] ?></td>
                         <td><?php echo $dato["Gobierno_Repre"] ?></td>
+                        <td><?php echo $dato["Titulo_obtenido"] ?></td>
+                        <td><?php echo $dato["Nivel"] ?></td>
+                    </tr>
+                    <tr>
+
                     </tr>
                 <?php }
                 ?>
                 </tbody>
             </table>
+
+        </div>
+        <h2 class="mt-2">Docentes Titulos</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>Titulo obtenido</th>
+                    <th>Nivel </th>
+                    <th>Año</th>
+                    <th>Institución </th>
+                    <th>Titulo_adjunto</th>
+                    <th>Capacitaciones del docente</th>
+                    <th>codigo academico</th>
+                    <th>Cedula docente</th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                foreach ( $titulo  as $dato) { ?>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td><?php echo $dato["Titulo_obtenido"] ?></td>
+                        <td><?php echo $dato["Nivel"] ?></td>
+                        <td><?php echo $dato["Año"] ?></td>
+                        <td><?php echo $dato["Institucion"] ?></td>
+                        <td><?php echo $dato["Titulo_adjunto"] ?></td>
+                        <td><?php echo $dato["Capacitaciones_docente"] ?></td>
+                        <td><?php echo $dato["cod_academico"] ?></td>
+                        <td><?php echo $dato["Docente_cedula"] ?></td>
+                    </tr>
+                <?php }
+                ?>
+                </tbody>
+            </table>
+            <br>
+
+        </div>
+
+        <h2 class="mt-2">Docentes Capacitaciones</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>Nombre capacitación</th>
+                    <th>Horas </th>
+                    <th>Año</th>
+                    <th>Codigo capacitación </th>
+                    <th>Cedula docente </th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                foreach ( $capacitacion  as $dato) { ?>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td><?php echo $dato["nombre_capacita"] ?></td>
+                        <td><?php echo $dato["horas"] ?></td>
+                        <td><?php echo $dato["Año"] ?></td>
+                        <td><?php echo $dato["cod_capacitaciones"] ?></td>
+                        <td><?php echo $dato["Docente_cedula"] ?></td>
+                    </tr>
+                <?php }
+                ?>
+                </tbody>
+            </table>
+            <br>
+
         </div>
         <a href="?controller=Home&action=mensaje&log=2" class="btn btn-primary mt-5" role="button">Salir</a>
     </main>

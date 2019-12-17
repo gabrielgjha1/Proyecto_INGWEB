@@ -24,8 +24,8 @@
                 </div>
             <div class="form-group row">
                 <div class="col-6">
-                    <label for="rol">Ingrese rol</label>
-                    <input type="number" value="1=Administrativo,2=Docente" name="rol" id="rol" class="form-control">
+                    <label for="rol">Ingrese rol (1=Administrativo,2=Docente)</label>
+                    <input type="number"  name="rol" id="rol" class="form-control">
                 </div>
             </div>
                 <div class="form-group row">

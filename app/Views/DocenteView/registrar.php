@@ -6,8 +6,6 @@
 
 <div class="container">
 
-
-
             <h2 class="mt-2">Registro Docente</h2>
         <main class="row mt-3 ">
             <div class="col">

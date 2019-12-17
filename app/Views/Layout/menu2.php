@@ -1,12 +1,9 @@
 <?php
 session_start();
-$_SESSION['resultado']
+
 ?>
-<script>
-    function ocultar() {
-        var boton = document.getElementById('registrar');
-    }
-</script>
+
+
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -42,4 +39,28 @@ $_SESSION['resultado']
             </div>
         </div>
     </nav>
+    <?php
+    $validar=$_SESSION['cedula'];
+    ?>
+
+    <script type="text/javascript">
+        var ultimoval = "<?php echo $validar;?>";
+    </script>
+    <script>
+
+        function ocultar() {
+            alert(ultimoval);
+            var boton = document.getElementById('registrar');
+            if (ultimoval!=""){
+                boton.style.display="none";
+
+            }
+
+        }
+
+        ocultar();
+
+
+
+    </script>
 </header>
